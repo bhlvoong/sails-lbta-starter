@@ -1,8 +1,8 @@
 # sails-lbta-starter
 
-This is the starter project to be used for LBTA tutorial lessons.  To keep things simple, this project is a simple 'Empty Project' generated through 'sails generate new' with addition a few things: 
-+ Registration and Login authentication functions in AuthController, sessions managed through passport and bcrypt-nodejs.  
-+ Sessions stored in MongoDB to maintain logged in users on server restart
+This is the starter project to be used for LBTA tutorial lessons.  To keep things simple, this is an 'Empty Project' generated through 'sails generate new' with the following extras: 
++ Registration and Login authentication functions in AuthController (sessions managed through passport and bcrypt-nodejs).  
++ Sessions stored in MongoDB to maintain logged in users on server restart (Modify config/sessions.js to configure location of your mongodb server).
 + /login and /register html pages ready for browser
 
 ### Links

@@ -20,6 +20,15 @@ module.exports.session = {
   ***************************************************************************/
   secret: '676efef77b8abd0ce844d52882740d8b',
 
+  /** Login to your database and create a user:
+   * db.createUser({user: 'tutorial_admin', pwd: '123123', 
+   *  roles: [{role: 'readWrite', db: 'local_rest_api'}]})
+   */
+
+  adapter: 'connect-mongo',
+  url: 'mongodb://tutorial_admin:123123@localhost/local_rest_api',
+  collection: 'sessions',
+
 
   /***************************************************************************
   *                                                                          *
