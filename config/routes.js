@@ -21,6 +21,23 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  'GET /login': { 
+    view: 'pages/signup_login/login' ,
+    locals: {
+      layout: 'layouts/registration'
+    }
+  },
+
+  'GET /register': { 
+    view: 'pages/signup_login/register',
+    locals: {
+      layout: 'layouts/registration'
+    }
+  },
+
+  'POST /register': 'AuthController.register',
+  'POST /login': 'AuthController.login',
+
 
   /***************************************************************************
   *                                                                          *

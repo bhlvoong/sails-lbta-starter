@@ -1,0 +1,22 @@
+<div style='display: flex; align-items: center; justify-content: center; 
+  width: 100%; height: 100%; background-color: rgb(232, 232, 232); position: absolute; padding: 0px'>
+
+    <form style='display: flex; width: 300px; background-color: white; flex-direction: column;' 
+      method='POST' action='/register'>
+
+      <p class='register-login-title'>Sign up for an account</p>
+
+      <input class='input-field' id='username' type="text" 
+        name="username" placeholder="Username">
+      <input class='input-field' id='email' type="email" 
+        name="email" placeholder="Email Address">
+      <input class='input-field' id='password' type="password" 
+        name="password" placeholder="Password" onkeydown="handleKeyDown()">
+      <input class='submit-button' onclick="woof()" type="submit" value="Submit">
+
+      <p class='login-help-text'>Already have an account? <a href='/login'>Log in</a>.</p>
+
+    </form>
+
+</div>
+

@@ -1,0 +1,50 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    async function handleLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        const formData = new FormData()
+        formData.append('username', username)
+        formData.append('password', password)
+
+        try {
+            const resp = await axios.post('/login', formData)
+            if (resp.data.user) {
+                window.location = '/'
+            }
+            
+        } catch (err) {
+            console.log("Login failed: " + err.message)
+        }
+        
+    }
+
+    async function handleKeyDown(event) {
+      if (event.keyCode == 13) {
+        handleLogin()
+      }
+    }
+
+</script>
+
+<div style='display: flex; align-items: center; justify-content: center; 
+  width: 100%; height: 100%; background-color: rgb(232, 232, 232); 
+  position: absolute; padding: 0px'>
+
+    <form style='display: flex; width: 300px; background-color: white; flex-direction: column;' 
+      method='POST'>
+
+      <p class='register-login-title'>Log in to your account</p>
+
+      <input class='input-field' id='username' type="text" 
+        name="username" placeholder="Username">
+      <input class='input-field' id='password' type="password" 
+        name="password" placeholder="Password" onkeydown="handleKeyDown(event)">
+      <input class='submit-button' onclick="handleLogin()" type="button" value="Submit">
+
+        <p class='login-help-text'>Don't have an account? <a href='/register'>Sign up</a>.</p>
+
+    </form>
+
+</div>

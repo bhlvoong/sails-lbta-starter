@@ -22,3 +22,101 @@
 // @import 'pages/signup.less';
 //
 // etc.
+/**
+ * importer.less
+ *
+ * By default, new Sails projects are configured to compile this file
+ * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * included automatically unless they are imported below.
+ *
+ * For more information see:
+ *   https://sailsjs.com/anatomy/assets/styles/importer-less
+ */
+
+
+// For example:
+//
+// @import 'variables/colors.less';
+// @import 'mixins/foo.less';
+// @import 'mixins/bar.less';
+// @import 'mixins/baz.less';
+//
+// @import 'styleguide.less';
+// @import 'pages/login.less';
+// @import 'pages/signup.less';
+//
+// etc.
+
+form {
+    border-radius: 8px;
+    padding: 8px 24px;
+    padding-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0px 24px rgb(232, 232, 232);
+    border: 1px solid rgb(225, 225, 225);
+  }
+
+  .input-field {
+    height: 40px;
+    padding: 0px 16px;
+    margin: 8px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(225, 225, 225);
+    font-size: 14px;
+  }
+
+  .submit-button {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(225, 225, 225);
+    background-color: dodgerblue;
+    color: white;
+    font-size: 14px; font-weight: bold;
+    margin-top: 16px
+  }
+
+  .register-login-title {
+    font-size: 16; font-weight: bold;
+    text-align: center;
+  }
+
+  .login-help-text {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%; height: 100%;
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+}
+
+.main {
+  display: flex;
+  position: relative;
+  padding: 24px;
+}
+
+.white-container {
+  background-color: white;
+  padding: 24px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgb(235, 235, 235)
+}
+
+.center-cropped {
+  object-position: center; /* Center the image within the element */
+  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  border: solid 1px rgb(94, 94, 94);
+}
+
+.main-left-column {
+    margin-right: 24px;
+}
+
+a {
+  color: black
+}
